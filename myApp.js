@@ -13,6 +13,7 @@ app.get('/', function(req, res, next) {
 
 app.post('/', function(req, res, next) {
  // Handle the post for this route
+  console.log("Hello World");
 });
 
 // --> 7)  Mount the Logger middleware here
@@ -22,7 +23,7 @@ app.post('/', function(req, res, next) {
 
 
 /** 1) Meet the node console. */
-console.log("Hello World")
+
 
 /** 2) A first working Express Server */
 
