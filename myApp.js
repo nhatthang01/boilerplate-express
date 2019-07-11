@@ -10,7 +10,9 @@ var app = express();
 
 
 /** 1) Meet the node console. */
-app.get("", function(req, res, next) {});
+app.get("https://narrow-plane.glitch.me/", function(req, res, next) {
+ console.log("Hello World");
+});
 
 /** 2) A first working Express Server */
 
