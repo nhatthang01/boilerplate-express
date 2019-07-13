@@ -11,7 +11,10 @@ var app = express();
 
 /** 1) Meet the node console. */
 console.log("Hello World");
-app.listen(process.env.PORT || 3000 );
+app.createServer((require, respone) => {
+ reponse.write("Hello World");
+ reponse.end();
+}).listen(process.env.PORT || 3000 );
 
 /** 2) A first working Express Server */
 
