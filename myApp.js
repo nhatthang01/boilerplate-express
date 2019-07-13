@@ -11,10 +11,19 @@ var app = express();
 
 /** 1) Meet the node console. */
 console.log("Hello World");
-app.createServer((require, respone) => {
- reponse.write("Hello World");
- reponse.end();
-}).listen(process.env.PORT || 3000 );
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.get('/', function(req, res, next) {
+  // Handle the get for this route
+});
+
+app.post('/', function(req, res, next) {
+ // Handle the post for this route
+});
 
 /** 2) A first working Express Server */
 
